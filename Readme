@@ -10,8 +10,8 @@
         when ena signal is false, this single port ram  neither writes nor reads.
   单口ram
   ena 信号控制ram的读写和复位功能，当ena信号为高时，单口ram可以进行读写操作，当ena信号为低时，单口ram不能进行任何操作。此时，输出端口输出0
-  当wea为高且ena为高时，表示正在往ram里面写数据，
-  当wea为高且ena为低时，表示ram正在读数据，
+  当wea为高且ena为高时，表示正在往ram里面写数据。
+  当wea为高且ena为低时，表示ram正在读数据。
 
   
   
