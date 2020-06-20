@@ -1,1 +1,17 @@
 --xilinx ip sim path
+1-clocking wized note:
+  locked is high meaning clock wized ip is worked normally, we can use locked signal as system reset, this reset is active low
+  locked信号拉高表示clocking wized ip 工作正常， 我们可以用locked信号作为系统复位信号，该系统复位为低电平有效。
+2-block memory generater note
+  2.1 single port ram
+  ena : write/read/reset enable
+  wea : when this signal is true and ena signal is true, the single port ram writes data. 
+        when this signal is false and ena signal is true, the single port ram reads data.
+        when ena signal is false, this single port ram  neither writes nor reads.
+  单口ram
+  ena 信号控制ram的读写和复位功能，当ena信号为高时，单口ram可以进行读写操作，当ena信号为低时，单口ram不能进行任何操作。此时，输出端口输出0
+  当wea为高且ena为高时，表示正在往ram里面写数据，
+  当wea为高且ena为低时，表示ram正在读数据，
+
+  
+  
