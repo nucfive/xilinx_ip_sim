@@ -12,6 +12,24 @@
   ena 信号控制ram的读写和复位功能，当ena信号为高时，单口ram可以进行读写操作，当ena信号为低时，单口ram不能进行任何操作。此时，输出端口输出0
   当wea为高且ena为高时，表示正在往ram里面写数据。
   当wea为高且ena为低时，表示ram正在读数据。
+  2.2 simple dual port ram
+  A port
+  ena : write/reset enable
+  wea : when this signal is true and ena signal is true, the single port ram writes data. 
+        when ena signal is false, this single port ram  neither writes nor reads.
+  B port
+  enb:read/reset enable
+  web:when this signal is true and ena signal is true, the single port ram reads data.
+  note: don't write and read the same address at the same time
+  
+  简单双口ram
+  A port
+  ena 信号控制ram的读写和复位功能，当ena信号为高时，单口ram可以进行写操作，当ena信号为低时，单口ram不能进行任何操作。此时，输出端口输出0
+  当wea为高且ena为高时，表示正在往ram里面写数据。
 
+  B port
+  enb 信号控制ram的读和复位功能，当ena信号为高时，单口ram可以进行写操作，当ena信号为低时，单口ram不能进行任何操作。此时，输出端口输出0
+  当web为高且enb为高时，表示正在往ram里面读数据。
+  注意：不能同时读写ram同一个地址
   
   
