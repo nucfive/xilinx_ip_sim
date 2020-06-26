@@ -32,4 +32,11 @@
   当web为高且enb为高时，表示正在往ram里面读数据。
   注意：不能同时读写ram同一个地址
   
+  2.3 true dual port ram
+  A and B port all both can be read and write
+  
+3-sync fifo
+  i_wr_en  : when this signal is high, write data to the fifo 
+  i_rd_en  : when this signal is high, read data from the fifo 
+
   
